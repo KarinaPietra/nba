@@ -1,0 +1,24 @@
+<h1>NBA Teams</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Team Name</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th> Win Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.city %>  </td>
+        <td><%= team.nickname %></td>
+        <td><%= team.wins %></td>
+        <td><%= team.losses%></td>
+        <td>%<%=team.win_percentage.round(2)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
